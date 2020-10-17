@@ -12,13 +12,13 @@ sleep 1
 chmod 755 /home/pi/powermanager/config.sh
 chmod 755 /home/pi/powermanager/scripts/autoshutdown.sh
 chmod 755 /home/pi/powermanager/scripts/autoshutdownstart.sh
-chmod 755 /home/pi/powermanager/powermanager.sh
+chmod 755 /home/pi/powermanager/scripts/powermanager.sh
 
 echo -e "\n\n========= installation autostart ==========="
 
-crontab -u pi -l | grep -v "/home/pi/powermanager/powermanager.sh  &"  | crontab -u pi -
+crontab -u pi -l | grep -v "/home/pi/powermanager/scripts/powermanager.sh  &"  | crontab -u pi -
 sleep 1
-(crontab -u pi -l ; echo "@reboot /home/pi/powermanager/powermanager.sh  &") | crontab -u pi -
+(crontab -u pi -l ; echo "@reboot /home/pi/powermanager/scripts/powermanager.sh  &") | crontab -u pi -
 
 echo -e "\n\n========= installation end ==========="
 echo -e "\n\n========= open and edit your config with ==========="
