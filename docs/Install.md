@@ -77,6 +77,7 @@ Download an install the power manager
 if u use it the first time use this
 
 ```
+cd
 git clone https://github.com/Raabi91/powermanager
 cd powermanager
 sh ./scripts/install.sh
