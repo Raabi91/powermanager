@@ -5,14 +5,14 @@ echo -e "\n\n========= Install Wiringpi ==========="
 sudo apt install wiringpi
 echo -e "\n\n========= Creat config.sh ==========="
 
-cp -l /home/pi/powermanager/example_config.sh home/pi/powermanager/config.sh
+cp -l /home/pi/powermanager/example_config.sh /home/pi/powermanager/config.sh
 
 echo -e "\n\n========= set permissions ==========="
 sleep 1
-chmod 755 home/pi/powermanager/config.sh
-chmod 755 home/pi/powermanager/scripts/autoshutdown.sh
-chmod 755 home/pi/powermanager/scripts/autoshutdownstart.sh
-chmod 755 home/pi/powermanager/powermanager.sh
+chmod 755 /home/pi/powermanager/config.sh
+chmod 755 /home/pi/powermanager/scripts/autoshutdown.sh
+chmod 755 /home/pi/powermanager/scripts/autoshutdownstart.sh
+chmod 755 /home/pi/powermanager/powermanager.sh
 
 echo -e "\n\n========= installation autostart ==========="
 
