@@ -56,6 +56,12 @@ if [ "$autoshutdown" = "1" ]; then
         gpio -g write $pin_autosh1 0
 		state="0"
         fi
+		if [ "$only" = "0" ]; then
+        echo "PRINTER OFF"
+        $printer_off
+        gpio -g write $pin_autosh1 0
+		state="0"
+        fi
 
 fi
 sleep 0.5

@@ -1,6 +1,10 @@
 # Powermanger for mainsail
 this script will be good for on and off the printer over wireless plugs (wifi or 466mhz) an u can also use the Gpio
-an it will also have a Autoshutdown funktion for it
+an it will also have a Autoshutdown funktion for it. 
+
+when you can use a shell command to set the state of your Plug 
+
+at my sampel i will use raspberry-remote with a 466mhz modul
 
 it will use the power control panel at mainsail, the power funktion from moonraker and the shell addon for klipper
 

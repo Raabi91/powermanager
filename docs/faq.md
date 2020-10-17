@@ -13,7 +13,7 @@ sudo reboot
 Open the config an edit the settings
 
 ```
-sudo nano home/pi/powermanager/config.sh
+sudo nano /home/pi/powermanager/config.sh
 ```
 or use Ftp and search the file to edit and reupload it. the path is /home/pi/powermanager/
 

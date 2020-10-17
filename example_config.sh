@@ -1,5 +1,5 @@
 #!/bin/sh
-# Only: 1=on/off/autoshutdown 2=only autoshutdown
+# Only: 1=on/off/autoshutdown 0=only autoshutdown
 only="1"
 # printer_off = shell command to switch printer off
 printer_off="sudo /home/pi/raspberry-remote/send --pin=29 10011 4 0"
