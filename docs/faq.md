@@ -3,7 +3,6 @@
 ## How Upgrade the script
 ```
 cd ~/powermanager
-git reset --hard HEAD
 git pull
 sudo reboot
 ```
