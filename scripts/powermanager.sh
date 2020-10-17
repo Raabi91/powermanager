@@ -3,54 +3,54 @@
 NAMENDATEI=config.sh
 . /home/pi/powermanager/$NAMENDATEI
 
-sensor="1"
-pin="4"
-pin1="6"
-state="0"
-on="1"
+state="0" 	#set state on reboot to off
 
-
-
-sudo /home/pi/raspberry-remote/send --pin=29 10011 4 0
+$printer_off
 
 sleep 15
-gpio -g mode $pin1 out
-gpio -g write $pin1 0
+
+gpio -g mode $pin_printer out
+gpio -g mode $pin_autosh out
+gpio -g mode $pin_autosh1 out
+gpio -g write $pin_autosh1 0
 
 while true
 do
 
-result="$( gpio -g read $pin )"
-autoshutdown="$( gpio -g read $pin1 )"
+result="$( gpio -g read $pin_printer )"
+autoshutdown="$( gpio -g read $pin_autosh1 )"
 
+if [ "$only" = "1" ]; then
 
-if [ "$result" = "$sensor" ]; then
+if [ "$result" = "1" ]; then
 
-	if [ "$state" != "$on" ]; then
+	if [ "$state" != "1" ]; then
 	echo "PRINTER ON"
-	sudo /home/pi/raspberry-remote/send --pin=29 10011 4 1
+	$printer_on
 	state="1"
 	fi
 
 fi
 
-if [ "$result" != "$sensor" ]; then
+if [ "$result" != "1" ]; then
 
 	if [ "$state" = "$on" ]; then
 	echo "PRINTER OFF"
-	sudo /home/pi/raspberry-remote/send --pin=29 10011 4 0
+	$printer_off
 	state="0"
 	fi
 fi
 
-if [ "$autoshutdown" = "$on" ]; then
+fi
 
-        if [ "$state" = "$on" ]; then
+if [ "$autoshutdown" = "1" ]; then
+
+        if [ "$state" = "1" ]; then
         echo "PRINTER OFF"
-        sudo /home/pi/raspberry-remote/send --pin=29 10011 4 0
-        gpio -g write $pin 0
-        gpio -g write $pin1 0
-	state="0"
+        $printer_off
+        gpio -g write $pin_printer 0
+        gpio -g write $pin_autosh1 0
+		state="0"
         fi
 
 fi

@@ -3,16 +3,14 @@
 NAMENDATEI=config.sh
 . /home/pi/powermanager/$NAMENDATEI
 
-sensor="1"
-pin="5"
-sleep 300
+sleep $time
 
-result="$( gpio -g read $pin2 )"
+result_autosh="$( gpio -g read $pin_autosh )"
 
-if [ "$result" = "$sensor" ]; then
+if [ "$result_autosh" = "1" ]; then
 
-	gpio -g write 6 1
+	gpio -g write $pin_autosh1 1
 fi
 
 sleep 5
-gpio -g write 6 0
+gpio -g write $pin_autosh1 0
