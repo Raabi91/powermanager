@@ -16,6 +16,8 @@ chmod 755 /home/pi/powermanager/powermanager.sh
 
 echo -e "\n\n========= installation autostart ==========="
 
+crontab -u pi -l | grep -v "/home/pi/powermanager/powermanager.sh  &"  | crontab -u pi -
+sleep 1
 (crontab -u pi -l ; echo "@reboot /home/pi/powermanager/powermanager.sh  &") | crontab -u pi -
 
 echo -e "\n\n========= installation end ==========="
