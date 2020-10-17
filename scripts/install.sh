@@ -18,7 +18,7 @@ echo "\n\n========= installation autostart ==========="
 
 crontab -u pi -l | grep -v "/home/pi/powermanager/scripts/powermanager.sh  &"  | crontab -u pi -
 sleep 1
-(crontab -u pi -l ; echo "@reboot /home/pi/powermanager/scripts/powermanager.sh  &") | crontab -u pi -
+(crontab -u pi -l ; echo "@reboot sh /home/pi/powermanager/scripts/powermanager.sh  &") | crontab -u pi -
 
 echo "\n\n========= installation end ==========="
 echo "\n\n========= open and edit your config with ==========="
