@@ -38,7 +38,7 @@ if [ "$only" = "1" ]; then
 
 if [ "$result" != "1" ]; then
 
-	if [ "$state" = "$on" ]; then
+	if [ "$state" = "1" ]; then
 	echo "PRINTER OFF"
 	$printer_off
 	state="0"
