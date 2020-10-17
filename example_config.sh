@@ -11,5 +11,5 @@ pin_printer="4"
 pin_autosh="5"
 # pin_autosh1 = a free gpio pin for autoshutdown (not the same as pin_autosh)
 pin_autosh1="6"
-# Time = Time after print end before shutdown in seconds
+# Time = Time after print end before shutdown in seconds (do not use under 60 sec)
 time="300"
