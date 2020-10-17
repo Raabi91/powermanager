@@ -22,6 +22,6 @@ sleep 1
 
 echo "\n\n========= installation end ==========="
 echo "\n\n========= open and edit your config with ==========="
-echo "\n\n========= sudo nano home/pi/powermanager/config.sh ==========="
+echo "\n\n========= sudo nano /home/pi/powermanager/config.sh ==========="
 
 exit 1

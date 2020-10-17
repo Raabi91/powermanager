@@ -85,7 +85,7 @@ sh ./scripts/install.sh
 
 the edit your config with
 ```
-sudo nano home/pi/powermanager/config.sh
+sudo nano /home/pi/powermanager/config.sh
 ```
 edit the variables between the ""
 
