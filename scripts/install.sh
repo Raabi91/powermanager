@@ -5,7 +5,7 @@ echo -e "\n\n========= Install Wiringpi ==========="
 sudo apt install wiringpi
 echo -e "\n\n========= Creat config.sh ==========="
 
-cp -l /home/pi/powermanager/example_config.sh /home/pi/powermanager/config.sh
+cp -i /home/pi/powermanager/example_config.sh /home/pi/powermanager/config.sh
 
 echo -e "\n\n========= set permissions ==========="
 sleep 1
@@ -20,8 +20,8 @@ crontab -u pi -l | grep -v "/home/pi/powermanager/scripts/powermanager.sh  &"  |
 sleep 1
 (crontab -u pi -l ; echo "@reboot /home/pi/powermanager/scripts/powermanager.sh  &") | crontab -u pi -
 
-echo -e "\n\n========= installation end ==========="
-echo -e "\n\n========= open and edit your config with ==========="
-echo -e "\n\n========= sudo nano home/pi/powermanager/config.sh ==========="
+echo  "\n\n========= installation end ==========="
+echo  "\n\n========= open and edit your config with ==========="
+echo  "\n\n========= sudo nano home/pi/powermanager/config.sh ==========="
 
 exit 1
