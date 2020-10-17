@@ -8,6 +8,8 @@ this sample will use raspberry-remote with a 466mhz modul
 
 it will use the power control panel at mainsail, the power funktion from moonraker and the shell addon for klipper
 
+in the panel you can put on an off the autoshutdown until shortly before the timer (your time in the config) is over.
+
 
 Version 0.1 17.10.2020
 
