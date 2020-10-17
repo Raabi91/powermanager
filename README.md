@@ -2,6 +2,8 @@
 this script will be good for on and off the printer over wireless plugs (wifi or 466mhz) an u can also use the Gpio
 an it will also have a Autoshutdown funktion for it
 
+it will use the power control panel at mainsail, the power funktion from moonraker and the shell addon for klipper
+
 ## [Install](https://github.com/Raabi91/powermanager/blob/main/docs/Install.md)
 ## [FAQ](https://github.com/Raabi91/powermanager/blob/main/docs/faq.md)
 ## Sources & Further Information

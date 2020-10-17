@@ -32,6 +32,10 @@ if [ "$result" = "1" ]; then
 
 fi
 
+fi
+
+if [ "$only" = "1" ]; then
+
 if [ "$result" != "1" ]; then
 
 	if [ "$state" = "$on" ]; then

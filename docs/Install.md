@@ -57,7 +57,7 @@ led_active_low: false
 put the shell command for klipper in your printer.cfg oder in the mainsail_macros.cfg
 ```
 [shell_command autoshutdown]
-command: sh /home/pi/powermanager/script/autoshutdownstart.sh
+command: sh /home/pi/powermanager/scripts/autoshutdownstart.sh
 timeout: 2.
 verbose: false
 ```
