@@ -4,9 +4,12 @@ an it will also have a Autoshutdown funktion for it.
 
 when you can use a shell command to set the state of your Plug 
 
-at my sampel i will use raspberry-remote with a 466mhz modul
+this sample will use raspberry-remote with a 466mhz modul
 
 it will use the power control panel at mainsail, the power funktion from moonraker and the shell addon for klipper
+
+
+Version 0.1 17.10.2020
 
 ## [Install](https://github.com/Raabi91/powermanager/blob/main/docs/Install.md)
 ## [FAQ](https://github.com/Raabi91/powermanager/blob/main/docs/faq.md)
