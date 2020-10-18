@@ -6,6 +6,9 @@ sudo apt install wiringpi
 echo "\n\n========= Creat config.sh ==========="
 
 cp -i /home/pi/powermanager/example_config.sh /home/pi/powermanager/config.sh
+cp -s /home/pi/powermanager/config.sh /home/pi/klipper_config/powermanager_config.sh
+
+
 
 echo "\n\n========= set permissions ==========="
 sleep 1
@@ -23,5 +26,7 @@ sleep 1
 echo "\n\n========= installation end ==========="
 echo "\n\n========= open and edit your config with ==========="
 echo "\n\n========= sudo nano /home/pi/powermanager/config.sh ==========="
+echo "\n\n========= or use mainsail and edit the powermanager_config.sh ==========="
+
 
 exit 1

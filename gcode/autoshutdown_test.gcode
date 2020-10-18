@@ -1,0 +1,14 @@
+G28
+G0 Z1 F600
+G0 X20 Y20 F3600
+G0 X50 Y50 F3600
+G0 X20 Y20 F3600
+G0 X50 Y50 F3600
+G91
+G0 Z2 F7200
+G90
+G0 X0 Y0
+M104 S0 ; turn off extruder
+M140 S0 ; turn off be
+RUN_SHELL_COMMAND CMD=autoshutdown
+M107 ; shut off fan
