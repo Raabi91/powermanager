@@ -1,6 +1,7 @@
 # Install
 
-## First of all install git on your pi
+## First of all 
+install git on your pi
 ```
 sudo apt-get install git -y
 ```
