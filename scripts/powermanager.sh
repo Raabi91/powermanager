@@ -3,6 +3,8 @@
 NAMENDATEI=config.sh
 . /home/pi/powermanager/$NAMENDATEI
 
+sh /home/pi/powermanager/scripts/autoshutdown.sh &
+
 state="0" 	#set state on reboot to off
 
 $printer_off
@@ -22,47 +24,25 @@ autoshutdown="$( gpio -g read $pin_autosh1 )"
 
 if [ "$only" = "1" ]; then
 
-if [ "$result" = "1" ]; then
+	if [ "$result" = "1" ]; then
 
-	if [ "$state" != "1" ]; then
-	echo "PRINTER ON"
-	$printer_on
-	state="1"
+		if [ "$state" != "1" ]; then
+		echo "PRINTER ON"
+		$printer_on
+		state="1"
+		echo "state=1" > /home/pi/powermanager/scripts/state.txt
+		fi
+	elif [ "$result" != "1" ]; then
+
+		if [ "$state" = "1" ]; then
+		echo "PRINTER OFF"
+		$printer_off
+		state="0"
+		echo "state=0" > /home/pi/powermanager/scripts/state.txt
+		fi
 	fi
 
 fi
 
-fi
-
-if [ "$only" = "1" ]; then
-
-if [ "$result" != "1" ]; then
-
-	if [ "$state" = "1" ]; then
-	echo "PRINTER OFF"
-	$printer_off
-	state="0"
-	fi
-fi
-
-fi
-
-if [ "$autoshutdown" = "1" ]; then
-
-        if [ "$state" = "1" ]; then
-        echo "PRINTER OFF"
-        $printer_off
-        gpio -g write $pin_printer 0
-        gpio -g write $pin_autosh1 0
-		state="0"
-        fi
-		if [ "$only" = "0" ]; then
-        echo "PRINTER OFF"
-        $printer_off
-        gpio -g write $pin_autosh1 0
-		state="0"
-        fi
-
-fi
 sleep 0.5
 done

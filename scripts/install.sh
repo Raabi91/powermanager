@@ -14,7 +14,6 @@ echo "\n\n========= set permissions ==========="
 sleep 1
 chmod 755 /home/pi/powermanager/config.sh
 chmod 755 /home/pi/powermanager/scripts/autoshutdown.sh
-chmod 755 /home/pi/powermanager/scripts/autoshutdownstart.sh
 chmod 755 /home/pi/powermanager/scripts/powermanager.sh
 
 echo "\n\n========= installation autostart ==========="

@@ -10,5 +10,4 @@ G90
 G0 X0 Y0
 M104 S0 ; turn off extruder
 M140 S0 ; turn off be
-RUN_SHELL_COMMAND CMD=autoshutdown
 M107 ; shut off fan

@@ -13,3 +13,5 @@ pin_autosh="5"
 pin_autosh1="6"
 # Time = Time after print end before shutdown in seconds (do not use under 60 sec)
 time="300"
+# Port from moonraker
+port="7125"
