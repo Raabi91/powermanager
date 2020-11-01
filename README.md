@@ -11,7 +11,7 @@ it will use the power control panel at mainsail, the power funktion from moonrak
 in the panel you can put on an off the autoshutdown until shortly before the timer (your time in the config) is over.
 
 
-Version 0.2 beta 18.10.2020
+Version 0.0.2 beta 1.11.2020
 
 features:
  - add config to klipper_config (now you can cahnge settigs over mainsail directly)
@@ -41,6 +41,12 @@ https://github.com/Arksine/moonraker
 **Mainsail Webinterface** by [meteyou](https://github.com/meteyou) :
 
 https://github.com/meteyou/mainsail
+
+---
+
+**Fluidd Webinterface** by [cadriel](https://github.com/cadriel) :
+
+https://github.com/cadriel/fluidd
 
 ---
 **kiauh** by [th33xitus](https://github.com/th33xitus) :
