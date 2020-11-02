@@ -13,14 +13,11 @@ sleep 15
 
 gpio -g mode $pin_printer out
 gpio -g mode $pin_autosh out
-gpio -g mode $pin_autosh1 out
-gpio -g write $pin_autosh1 0
 
 while true
 do
 
 result="$( gpio -g read $pin_printer )"
-autoshutdown="$( gpio -g read $pin_autosh1 )"
 
 if [ "$only" = "1" ]; then
 
