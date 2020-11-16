@@ -48,6 +48,13 @@ cd powermanager
 sh ./scripts/install.sh
 ```
 
+if you use a raspberry pi 4 do a manuel upgrade to wiringpi 2.52 with
+```
+cd /tmp
+wget https://project-downloads.drogon.net/wiringpi-latest.deb
+sudo dpkg -i wiringpi-latest.deb
+```
+
 the edit your config with
 ```
 sudo nano /home/pi/powermanager/config.sh
