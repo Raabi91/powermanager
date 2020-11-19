@@ -3,7 +3,7 @@
 NAMENDATEI=config.sh
 . /home/pi/powermanager/$NAMENDATEI
 
-$print_state=0
+print_state=0
 
 while true
 do
