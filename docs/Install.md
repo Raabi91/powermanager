@@ -14,25 +14,22 @@ sudo nano /home/pi/moonraker.conf
 put this at the end wenn you will use on, off an autoshutdown
 
 ```
-[power]
-devices: printer, led
-printer_name: X5SAPro
-printer_pin: 4
-printer_active_low: false
-led_name: Autoshutdown
-led_pin: 5
-led_active_low: false
+[power Printername]
+type: gpio
+pin: gpio4
+
+[power autoshutdown]
+type: gpio
+pin: gpio5
 ```
 the pins can be exchanged but have to be noted down for later
 
-if you will only use autoshutdown tthen you can delete the printer like this
+if you will only use autoshutdown then you can delete the printer like this
 
 ```
-[power]
-devices: led
-led_name: Autoshutdown
-led_pin: 5
-led_active_low: false
+[power autoshutdown]
+type: gpio
+pin: gpio5
 ```
 
 ## Third
