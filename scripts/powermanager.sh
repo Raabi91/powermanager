@@ -43,7 +43,6 @@ if [ "$only" = "1" ]; then
 elif [ "$klipper_restart" = "1" ]; then
 		sudo service klipper restart
 		curl -H "Content-Type: application/json" -X POST http://127.0.0.1:7125/machine/device_power/off?Klipper%20Restart
-		fi
 fi
 
 sleep 0.5
