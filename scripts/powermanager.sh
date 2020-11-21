@@ -13,11 +13,13 @@ sleep 15
 
 gpio -g mode $pin_printer out
 gpio -g mode $pin_autosh out
-
+gpio -g mode $pin_printer out
+gpio -g write 6 0
 while true
 do
 
 result="$( gpio -g read $pin_printer )"
+klipper_restart="$( gpio -g read 6 )"
 
 if [ "$only" = "1" ]; then
 
@@ -38,7 +40,10 @@ if [ "$only" = "1" ]; then
 		echo "state=0" > /home/pi/powermanager/scripts/state.txt
 		fi
 	fi
-
+elif [ "§klipper_restart" = "1" ]; then
+		sudo service klipper restart
+		gpio -g write 6 0
+		fi
 fi
 
 sleep 0.5
