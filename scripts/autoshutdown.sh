@@ -24,7 +24,7 @@ elif [ "$print_state_read" = "complete" ]; then
         	if [ "$state" = "1" ]; then
         	echo "PRINTER OFF"
         	$printer_off
-        	gpio -g write $pin_printer 0
+        	curl -H "Content-Type: application/json" -X POST http://127.0.0.1:7125/machine/device_power/off?Tronxy%20X5SAPro
 			echo "state=0" > /home/pi/powermanager/scripts/state.txt
         	fi
 			if [ "$only" = "0" ]; then

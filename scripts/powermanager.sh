@@ -42,7 +42,7 @@ if [ "$only" = "1" ]; then
 	fi
 elif [ "§klipper_restart" = "1" ]; then
 		sudo service klipper restart
-		gpio -g write 6 0
+		curl -H "Content-Type: application/json" -X POST http://127.0.0.1:7125/machine/device_power/off?Klipper%20Restart
 		fi
 fi
 
